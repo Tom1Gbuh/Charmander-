@@ -122,6 +122,7 @@
         }
         #tableSection1{
             flex-direction: column;
+            min-width: 444px;
         }
         
     }
