@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="./images/ball.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charmander</title>
+</head>
+
+<body>
+    <!-- OUTER CONTAINER -->
+    <main class="outer-container">
+        <!-- HEADER WITH LOGO AND TITLE -->
+        <header>
+            <img id="Logo" src="./images/p1.png" alt="Charmander logo">
+            <h1 id="Logo-title">Charmander</h1>
+        </header>
+
+        <!-- NAVIGATION BAR -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="./gallery.html">Gallery</a>
+                </li>
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- GALLERY AREA -->
+        <article class="gallery-container">
+
+            <div class="thumb-container">
+                <img src="./images/p3.jpg" class="gallery-image" alt="Smiling T-posing Charmander" onclick="openModal(this)">
+            </div>
+
+            <div class="thumb-container">
+                <img src="./images/p4.jpg" class="gallery-image" alt="Flying Fire-spitting Charmander" onclick="openModal(this)">
+            </div>
+
+            <div class="thumb-container">
+                <img src="./images/p5.jpg" class="gallery-image" alt="Charmander Jumping" onclick="openModal(this)">
+            </div>
+
+            <div class="thumb-container">
+                <img src="./images/p6.jpg" class="gallery-image" alt="Tail-swinging Charmander" onclick="openModal(this)">
+            </div>
+
+            <!-- FULLSCREEN IMAGE MODAL - HIDDEN BY DEFAULT -->
+            <div id="modal1" class="modal" onclick="this.style.display='none'">
+                <span class="close">&times;</span>
+                <div class="modal-content">
+                    <img id="fullsize-img" alt="Charmander">
+                </div>
+            </div>
+
+
+        </article>
+
+        <!-- FOOTER WITH COPYRIGHT -->
+        <footer>
+            <p>Site Created By Tom</p>
+        </footer>
+
+    </main>
+</body>
+
+<script>
+    function openModal(item) {
+        document.getElementById("fullsize-img").src = item.src;
+        document.getElementById("modal1").style.display = "block"
+    }
+</script>
+
+</html>
